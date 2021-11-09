@@ -1,0 +1,17 @@
+name: Prepare Terragrunt
+
+on: [push]
+
+jobs:
+  job_tg:
+    name: Job prepare tg
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Terragrunt
+        uses: the-commons-project/terragrunt-github-actions@master
+        with:
+          tg_actions_version: "0.26.0"
+      - name: Interact with Terragrunt
+        run: terragrunt --version
