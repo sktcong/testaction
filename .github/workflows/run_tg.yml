@@ -10,8 +10,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup Terragrunt
-        uses: the-commons-project/terragrunt-github-actions@master
+        uses: autero1/action-terragrunt@v1.1.0
         with:
-          tg_actions_version: "0.26.0"
+          terragrunt_version: 0.26.0
       - name: Interact with Terragrunt
         run: terragrunt --version
