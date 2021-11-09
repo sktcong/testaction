@@ -15,3 +15,10 @@ jobs:
           terragrunt_version: 0.26.0
       - name: Interact with Terragrunt
         run: terragrunt --version
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 0.14.4
+      - name: Interact with Terraform
+        run: terraform --version
+
